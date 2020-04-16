@@ -1,16 +1,22 @@
 PODS:
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
   - SWRevealViewController (2.3.0)
 
 DEPENDENCIES:
+  - SQLite.swift
   - SWRevealViewController
 
 SPEC REPOS:
   trunk:
+    - SQLite.swift
     - SWRevealViewController
 
 SPEC CHECKSUMS:
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
 
-PODFILE CHECKSUM: 8c99526909f92499b495679da9a084b26d83872f
+PODFILE CHECKSUM: 52f3d5dfa51b9efc1d6ed08b020c103a06639aad
 
 COCOAPODS: 1.9.0

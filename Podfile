@@ -7,5 +7,6 @@ target 'demo1' do
 
   # Pods for demo1
   pod 'SWRevealViewController'
+  pod 'SQLite.swift'
 
 end

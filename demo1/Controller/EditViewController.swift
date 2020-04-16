@@ -40,7 +40,8 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         birthday.borderStyle = .none
 //        name.isUserInteractionEnabled = false
         image.layer.cornerRadius = 0.5 * image.bounds.size.width
-        image.backgroundColor = .blue
+        image.clipsToBounds = true
+//        image.backgroundColor = .blue
         image.frame = CGRect(x: 132, y: 88, width: 150, height: 150)
         name.delegate = self
         email.delegate = self

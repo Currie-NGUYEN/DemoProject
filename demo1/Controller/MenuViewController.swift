@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import SWRevealViewController
+
+protocol SWRevealViewControllerDelegate {
+    func moveToReminders()
+}
 
 class MenuViewController: UIViewController {
 
@@ -20,11 +25,11 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var reminderList: UITableView!
     
     let defaults = UserDefaults.standard
+    var delegate: SWRevealViewControllerDelegate?
     //MARK: -init
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let dataUSer = defaults.object(forKey: "UserInfor")
         if(dataUSer != nil){
             let userInfor = dataUSer as! UserInfor
@@ -45,6 +50,13 @@ class MenuViewController: UIViewController {
     
     //MARK: -Handler
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        <#code#>
+    }
+    
     @IBAction func showAll(_ sender: UIButton) {
+//        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SettingsNavigationController") as! SettingsNavigationController
+//        present(vc, animated: true, completion: nil)
+        self.revealViewController()?.revealToggle(animated: true)
     }
 }
