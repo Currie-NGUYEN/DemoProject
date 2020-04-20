@@ -7,16 +7,23 @@
 //
 
 import UIKit
+import UserNotifications
+import SWRevealViewController
+
+protocol NotifyDelegate {
+    func didTapNotification()
+}
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var delegate:NotifyDelegate?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        UNUserNotificationCenter.current().delegate = self
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
@@ -51,3 +58,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+extension SceneDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        if response.actionIdentifier == UNNotificationDismissActionIdentifier {
+            // The user dismissed the notification without taking action
+        }
+        else if response.actionIdentifier == UNNotificationDefaultActionIdentifier {
+            delegate?.didTapNotification()
+//            tabBarController?.selectedIndex = 2
+//            window.roo
+//            (tabBarController as! TabBarController).moveToSettings()
+//            print("From notify")
+////            window?.rootViewController =
+//            DispatchQueue.main.async {
+//                let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "RemindersController") as! RemindersController
+//                self.window?.rootViewController?.present(vc, animated: true, completion: nil)
+//            }
+        }
+
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert,.sound,.badge])
+    }
+}

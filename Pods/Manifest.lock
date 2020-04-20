@@ -1,22 +1,36 @@
 PODS:
+  - Alamofire (5.0.2)
+  - Kingfisher (5.13.2):
+    - Kingfisher/Core (= 5.13.2)
+  - Kingfisher/Core (5.13.2)
   - SQLite.swift (0.12.2):
     - SQLite.swift/standard (= 0.12.2)
   - SQLite.swift/standard (0.12.2)
+  - SwiftyJSON (5.0.0)
   - SWRevealViewController (2.3.0)
 
 DEPENDENCIES:
+  - Alamofire
+  - Kingfisher
   - SQLite.swift
+  - SwiftyJSON
   - SWRevealViewController
 
 SPEC REPOS:
   trunk:
+    - Alamofire
+    - Kingfisher
     - SQLite.swift
+    - SwiftyJSON
     - SWRevealViewController
 
 SPEC CHECKSUMS:
+  Alamofire: 3ba7a4db18b4f62c4a1c0e1cb39d7f3d52e10ada
+  Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
 
-PODFILE CHECKSUM: 52f3d5dfa51b9efc1d6ed08b020c103a06639aad
+PODFILE CHECKSUM: 4cb972b5047fe9404d06b9151ca1ae27c16dfc3d
 
 COCOAPODS: 1.9.0

@@ -10,16 +10,16 @@ import UIKit
 import SWRevealViewController
 
 class AboutController: UIViewController, UIWebViewDelegate {
-
+    
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var menuBar: UIBarButtonItem!
+    let activityView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
         menuBar.target = self.revealViewController()
         menuBar.action = #selector(SWRevealViewController.revealToggle(_:))
-        self.view.addGestureRecognizer((self.revealViewController()?.panGestureRecognizer())!)
         self.revealViewController()?.rearViewRevealWidth = 350
         
         navigationController?.navigationBar.barTintColor = .systemIndigo
@@ -33,6 +33,15 @@ class AboutController: UIViewController, UIWebViewDelegate {
         let url = URL(string: "https://www.themoviedb.org/")
         let myRequest = URLRequest(url: url!)
         webView.loadRequest(myRequest)
+        
+        activityView.color = .black
+        activityView.frame = CGRect(x: view.frame.midX - 100/2 , y: view.frame.midY - 100/2, width: 100, height: 100)
+        activityView.hidesWhenStopped = true
+        activityView.startAnimating()
+        view.addSubview(activityView)
     }
-
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        activityView.stopAnimating()
+    }
 }

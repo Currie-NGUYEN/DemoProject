@@ -7,28 +7,42 @@
 //
 
 import UIKit
+import SWRevealViewController
+
+protocol TabBarDelegate {
+    func moveToReminders()
+}
 
 class TabBarController: UITabBarController {
     
     @IBOutlet weak var tabBarCustom: UITabBar!
+    var delegateCT: TabBarDelegate?
     
     let menu = MenuViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
-//        menu.delegate = self
-        
+        self.revealViewController()?.rightViewRevealOverdraw = 100.0
         
         tabBarCustom.barTintColor = .systemIndigo
         tabBarCustom.tintColor = .white
-        // Do any additional setup after loading the view.
+        
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+          let sceneDelegate = windowScene.delegate as? SceneDelegate
+        else {
+          return
+        }
+        sceneDelegate.delegate = self
+    }
+    
+    func moveToSettings(){
+        self.selectedIndex = 2
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.delegateCT?.moveToReminders()
+        }
     }
 }
-
-//extension TabBarController: MenuDelegate{
-//    func moveToReminders() {
-//        print("ss")
-//    }
-//    
-//    
-//}
-
+extension TabBarController: NotifyDelegate {
+    func didTapNotification() {
+        moveToSettings()
+    }
+}

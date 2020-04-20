@@ -18,7 +18,7 @@ class LocalDatabase{
     let name = Expression<String>("name")
     let birthday = Expression<Int>("birthday")
     let gender = Expression<Bool>("gender")
-    let favorite = Expression<String>("gender")
+    let favorite = Expression<String>("favorite")
     let reminder = Expression<String>("reminder")
     
     //MARK: - init
@@ -48,7 +48,7 @@ class LocalDatabase{
             try self.database.run(createTable)
             print("Created table")
         } catch {
-            print(error)
+            print("error: \(error))")
         }
     }
     
@@ -87,6 +87,9 @@ class LocalDatabase{
         do {
             let users = try self.database.prepare(self.userTable)
             print("Got all users")
+            for user in users {
+                print(user[self.name])
+            }
             return users
         } catch {
             print(error)
@@ -99,6 +102,16 @@ class LocalDatabase{
         let deleteUser = user.delete()
         do {
             try self.database.run(deleteUser)
+        } catch {
+            print(error)
+        }
+    }
+    
+    func deleteTable() {
+        let delete = userTable.drop(ifExists: true)
+        do {
+            try self.database.run(delete)
+            print("delete table success")
         } catch {
             print(error)
         }

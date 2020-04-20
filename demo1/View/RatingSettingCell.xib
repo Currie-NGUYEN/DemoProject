@@ -16,10 +16,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="142"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xu-m1-Utj">
-                        <rect key="frame" x="284" y="12" width="24" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xu-m1-Utj">
+                        <rect key="frame" x="258" y="12" width="50" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="24" id="Vzq-yh-xGO"/>
+                            <constraint firstAttribute="width" constant="50" id="Vzq-yh-xGO"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -27,6 +27,7 @@
                     </label>
                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="baD-QC-xtF">
                         <rect key="frame" x="33" y="40.5" width="247" height="31"/>
+                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </slider>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pig-ql-LT6">
                         <rect key="frame" x="12" y="45" width="11" height="21"/>
@@ -47,7 +48,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTA-1b-g5h">
-                        <rect key="frame" x="12" y="12" width="260" height="21"/>
+                        <rect key="frame" x="12" y="12" width="234" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -70,7 +71,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="currentRating" destination="3xu-m1-Utj" id="eJO-8U-jXC"/>
                 <outlet property="label" destination="BTA-1b-g5h" id="Zuy-ve-h3Q"/>
+                <outlet property="slider" destination="baD-QC-xtF" id="heG-0Y-uxo"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="169.41964285714286"/>
         </tableViewCell>

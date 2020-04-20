@@ -6,10 +6,10 @@
 //  Copyright © 2020 Currie. All rights reserved.
 //
 
-struct UserInfor {
-    var name: String
-    var avartar: String
-    var birthday: Int
-    var email: String
-    var gender: Bool
+struct UserInfor: Codable {
+    var name: String = ""
+    var avartar: String = ""
+    var birthday: Int?
+    var email: String = ""
+    var gender: Bool = true
 }

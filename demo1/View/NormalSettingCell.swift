@@ -11,6 +11,7 @@ import UIKit
 class NormalSettingCell: UITableViewCell {
 
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var checkIcon: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
