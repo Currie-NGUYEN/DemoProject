@@ -69,14 +69,26 @@ class DatePickerController: UIViewController {
     
     func setDatePicker(){
         self.datePicker = UIDatePicker(frame: viewDataPicker.frame)
+        self.datePicker.translatesAutoresizingMaskIntoConstraints = false
+        viewDataPicker.addSubview(datePicker)
+        self.datePicker.trailingAnchor.constraint(equalTo: viewDataPicker.trailingAnchor).isActive = true
+        self.datePicker.leadingAnchor.constraint(equalTo: viewDataPicker.leadingAnchor).isActive = true
+        
+        self.datePicker.center = viewDataPicker.center
         datePicker.datePickerMode = datePickerType
         datePicker.date = Date(timeIntervalSince1970: dateDefault)
-        view.addSubview(datePicker)
+        
     }
     
     func setOnlyYear(){
         self.onlyYearPicker = UIPickerView(frame: viewDataPicker.frame)
+        self.onlyYearPicker.translatesAutoresizingMaskIntoConstraints = false
+        viewDataPicker.addSubview(onlyYearPicker)
+//        self.onlyYearPicker.center = viewDataPicker.center
         
+//        self.onlyYearPicker.center = viewDataPicker.center
+        self.onlyYearPicker.trailingAnchor.constraint(equalTo: viewDataPicker.trailingAnchor).isActive = true
+        self.onlyYearPicker.leadingAnchor.constraint(equalTo: viewDataPicker.leadingAnchor).isActive = true
         let currentYear = Calendar.current.component(.year, from: Date())
         
         for index in 1970...currentYear {
@@ -86,7 +98,7 @@ class DatePickerController: UIViewController {
         onlyYearPicker.delegate = self
         onlyYearPicker.dataSource = self
         onlyYearPicker.selectRow(years.firstIndex(of: yearDefault)!, inComponent: 0, animated: true)
-        view.addSubview(onlyYearPicker)
+        
     }
 }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -51,7 +51,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ry-l3-SW5">
-                                <rect key="frame" x="57" y="286.5" width="345" height="0.0"/>
+                                <rect key="frame" x="57" y="286.66666666666669" width="345" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -73,7 +73,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="envelope.badge.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nbg-rx-CbH">
-                                <rect key="frame" x="12" y="323.5" width="25" height="23.5"/>
+                                <rect key="frame" x="12" y="324" width="25" height="23.333333333333343"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Opx-n4-x2q"/>
@@ -87,13 +87,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminder List:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rG-Ff-O0m">
-                                <rect key="frame" x="12" y="466.5" width="390" height="27"/>
+                                <rect key="frame" x="12" y="466.66666666666669" width="390" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Vhn-fx-cuq">
-                                <rect key="frame" x="12" y="375.5" width="25" height="22"/>
+                                <rect key="frame" x="12" y="376" width="25" height="21.666666666666686"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="iK9-GS-Z3I"/>
@@ -101,7 +101,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" tag="-1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWe-Ul-pjf">
-                                <rect key="frame" x="162" y="411.5" width="90" height="30"/>
+                                <rect key="frame" x="162" y="411.66666666666669" width="90" height="30"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="fVg-P6-eYo"/>
@@ -115,7 +115,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="-1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwZ-9d-Qz7">
-                                <rect key="frame" x="162" y="743.5" width="90" height="30"/>
+                                <rect key="frame" x="162" y="743.66666666666663" width="90" height="30"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="u4G-Ep-2hf"/>
@@ -129,13 +129,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dU-RX-Tfz">
-                                <rect key="frame" x="57" y="386.5" width="345" height="0.0"/>
+                                <rect key="frame" x="57" y="386.66666666666669" width="345" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wy3-BC-Tu6">
-                                <rect key="frame" x="0.0" y="518.5" width="414" height="200"/>
+                                <rect key="frame" x="0.0" y="518.66666666666663" width="414" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="f58-W7-2Bm"/>
@@ -210,7 +210,7 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="envelope.badge.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="183-r5-IVn">
-                                <rect key="frame" x="12" y="358.5" width="25" height="23.5"/>
+                                <rect key="frame" x="12" y="359" width="25" height="23.333333333333314"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="LIS-78-JLv"/>
@@ -227,7 +227,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tMY-8u-4OU">
-                                <rect key="frame" x="12" y="410.5" width="25" height="22"/>
+                                <rect key="frame" x="12" y="411" width="25" height="21.666666666666686"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="7zx-2V-NzO"/>
@@ -235,7 +235,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PdJ-Dh-jxe">
-                                <rect key="frame" x="127" y="411.5" width="20" height="20"/>
+                                <rect key="frame" x="127" y="411.66666666666669" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="g9t-mG-nSz"/>
                                     <constraint firstAttribute="width" constant="20" id="jGW-kx-8VR"/>
@@ -256,7 +256,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHA-b6-XzA">
-                                <rect key="frame" x="382" y="411.5" width="20" height="20"/>
+                                <rect key="frame" x="382" y="411.66666666666669" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="EJa-H8-qIU"/>
                                     <constraint firstAttribute="height" constant="20" id="IrQ-cO-PRH"/>
@@ -616,7 +616,7 @@
                                 <rect key="frame" x="5" y="807" width="404" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92S-dP-WTZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="201.5" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="201.66666666666666" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -626,7 +626,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ml-yk-dTx">
-                                        <rect key="frame" x="202.5" y="0.0" width="201.5" height="50"/>
+                                        <rect key="frame" x="202.66666666666663" y="0.0" width="201.33333333333337" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Done">
                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -885,7 +885,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="584.5" height="438.5"/>
+        <image name="background" width="389.66665649414062" height="292.33334350585938"/>
         <image name="birthday-icon" width="256" height="256"/>
         <image name="envelope.badge.fill" catalog="system" width="64" height="48"/>
         <image name="heart.fill" catalog="system" width="64" height="54"/>
@@ -893,10 +893,10 @@
         <image name="info.circle.fill" catalog="system" width="64" height="60"/>
         <image name="line.horizontal.3" catalog="system" width="64" height="32"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
-        <image name="radioBT-check" width="490.5" height="491"/>
-        <image name="radioBT-uncheck" width="256" height="256"/>
+        <image name="radioBT-check" width="327" height="327.33334350585938"/>
+        <image name="radioBT-uncheck" width="170.66667175292969" height="170.66667175292969"/>
         <image name="sad-face" width="100" height="100"/>
-        <image name="settings-50" width="50" height="50"/>
+        <image name="settings-50" width="33.333332061767578" height="33.333332061767578"/>
         <image name="star" catalog="system" width="64" height="58"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

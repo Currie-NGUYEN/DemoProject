@@ -177,6 +177,7 @@ extension SettingsController: UITableViewDelegate, UITableViewDataSource{
         let indexPath = IndexPath.init(item: 4, section: 0)
         (table.cellForRow(at: indexPath) as! RatingSettingCell).currentRating.text = "\(value)"
         userService.saveSetting(settings: setting) { (_) in
+            NotificationCenter.default.post(name: NSNotification.Name.init("SettingChanged"), object: nil)
         }
     }
     
@@ -210,6 +211,7 @@ extension SettingsController: UITableViewDelegate, UITableViewDataSource{
                     setting.type = "popular"
                 }
                 userService.saveSetting(settings: setting) { (_) in
+                    NotificationCenter.default.post(name: NSNotification.Name.init("SettingChanged"), object: nil)
                     table.reloadData()
                 }
             }
@@ -223,6 +225,7 @@ extension SettingsController: UITableViewDelegate, UITableViewDataSource{
                 setting.sortBy = "releaseDate"
             }
             userService.saveSetting(settings: setting) { (_) in
+                NotificationCenter.default.post(name: NSNotification.Name.init("SettingChanged"), object: nil)
                 table.reloadData()
             }
         }
@@ -233,6 +236,7 @@ extension SettingsController: YearPickerDelegate{
     func didSetYear(year: Int) {
         setting.yearRelease = year
         userService.saveSetting(settings: setting) { (_) in
+            NotificationCenter.default.post(name: NSNotification.Name.init("SettingChanged"), object: nil)
             (table.cellForRow(at: IndexPath(row: 5, section: 0)) as! ReleaseSettingCell).yearButton.setTitle("\(setting.yearRelease)", for: .normal)
         }
     }

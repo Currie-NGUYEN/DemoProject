@@ -55,11 +55,19 @@ class MoviesController: UIViewController {
         activityView.frame = CGRect(x: view.frame.midX - 100/2 , y: view.frame.midY - 100/2, width: 100, height: 100)
         activityView.hidesWhenStopped = true
         view.addSubview(activityView)
+        
+        loadData()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: NSNotification.Name.init("SettingChanged"), object: nil)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    @objc func reloadData(notification: Notification){
         loadData()
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        loadData()
+//    }
     
     func loadData(){
         activityView.startAnimating()
